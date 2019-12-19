@@ -6,6 +6,7 @@ export const invoiceCardFooterStyle = StyleSheet.create({
         width: '100%',
         height: '21%',
         display: 'flex',
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#e4e6eb',
@@ -15,6 +16,12 @@ export const invoiceCardFooterStyle = StyleSheet.create({
     invoiceCardFooterDescription: {
         fontSize: 13,
         color: '#6f7073'
+    },
+
+    recentBuyIcon: {
+        width: 32,
+        height: 38,
+        marginRight: 10
     }
 
 })

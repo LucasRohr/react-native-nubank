@@ -5,7 +5,7 @@ export const menuOptionStyle = StyleSheet.create({
 
     menuOptionContainer: {
         width: 100,
-        height: '70%',
+        height: '65%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
@@ -18,7 +18,13 @@ export const menuOptionStyle = StyleSheet.create({
 
     optionCardTitle: {
         fontSize: 13,
-        color: colors.secondary
+        color: colors.secondary,
+        textAlign: 'left'
+    },
+
+    optionIcon: {
+        width: 38,
+        height: 30
     }
 
 })

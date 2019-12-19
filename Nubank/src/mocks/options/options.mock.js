@@ -7,15 +7,15 @@ export const optionsList = [
     },
     {
         icon: MenuOptionsIcons.INDICAR_AMIGOS,
-        title: 'Indicar amigos'
+        title: 'Depositar'
     },
     {
         icon: MenuOptionsIcons.INDICAR_AMIGOS,
-        title: 'Indicar amigos'
+        title: 'Transferir'
     },
     {
         icon: MenuOptionsIcons.INDICAR_AMIGOS,
-        title: 'Indicar amigos'
+        title: 'Ajustar limite'
     },
     {
         icon: MenuOptionsIcons.INDICAR_AMIGOS,
