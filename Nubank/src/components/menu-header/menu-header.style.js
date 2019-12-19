@@ -1,28 +1,41 @@
 import { StyleSheet } from 'react-native'
 import { colors } from '../../style'
 
-export const MenuHeaderStyle = StyleSheet.create({
+export const menuHeaderStyle = StyleSheet.create({
 
     menuHeader: {
         width: '100%',
-        height: '15%',
+        height: 'auto',
         display: 'flex',
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: '5%'
+        marginTop: '15%'
     },
 
     usernameText: {
-        fontSize: 25,
+        fontSize: 23,
         color: colors.secondary,
         fontFamily: "Neue Helvetica",
         fontWeight: 'bold'
     },
 
     nubankLogo: {
-        width: '45%',
-        height: '100%'
+        width: 52,
+        height: 39
+    },
+
+    logoNameContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    arrowDown: {
+        width: 18,
+        height: 12,
+        marginTop: '3%'
     }
 
 })

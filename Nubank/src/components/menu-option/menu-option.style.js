@@ -5,7 +5,7 @@ export const menuOptionStyle = StyleSheet.create({
 
     menuOptionContainer: {
         width: 100,
-        height: 100,
+        height: '70%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',

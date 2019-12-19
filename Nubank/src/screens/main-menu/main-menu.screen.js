@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react'
-import { View, ScrollView, Dimensions } from 'react-native'
+import { View, ScrollView } from 'react-native'
 import { mainMenuStyle } from "./main-menu.style";
 import { MenuOption, MenuHeader, MenuCard } from '../../components';
 import { optionsList, menuCards } from '../../mocks';
-import SideSwipe from 'react-native-sideswipe';
+import Carousel, { Pagination } from 'react-native-snap-carousel'
+import { MenuCards } from '../../enums';
 
 export class MainMenu extends PureComponent {
 
@@ -12,7 +13,7 @@ export class MainMenu extends PureComponent {
         this.state = {
             optionsCardsList: optionsList,
             cardsList: menuCards,
-            currentIndex: 0,
+            activeSlide: 0,
             user: {
                 username: 'Lucas'
             }
@@ -27,29 +28,44 @@ export class MainMenu extends PureComponent {
         )
     }
 
-    renderMenuCards = () => {
-        return <MenuCard />
+    renderMenuCard = () => {
+        const enumAsList = Object.values(MenuCards)
+
+        return <MenuCard item={enumAsList[this.state.activeSlide]} />
+    }
+
+    returnPagination = () => {
+        return (
+            <Pagination
+              dotsLength={this.state.cardsList.length}
+              activeDotIndex={this.state.activeSlide}
+              dotStyle={{
+                  width: 10,
+                  height: 10,
+                  borderRadius: 12,
+                  marginHorizontal: 8,
+                  backgroundColor: 'rgba(255, 255, 255, 0.92)'
+              }}
+              inactiveDotOpacity={0.4}
+              inactiveDotScale={0.6}
+            />
+        )
     }
 
     renderCarousel = () => {
         return (
-            <SideSwipe
-                index={this.state.currentIndex}
-                itemWidth={MenuCard.WIDTH}
-                style={{ width: 200 }}
-                data={this.state.cardsList}
-                onIndexChange={index =>
-                    this.setState({ currentIndex: index })
-                }
-                renderItem={({ itemIndex, currentIndex, item, animatedValue }) => (
-                    <MenuCard
-                        {...item}
-                        index={itemIndex}
-                        currentIndex={currentIndex}
-                        animatedValue={animatedValue}
+            <View style={mainMenuStyle.paginationCarouselContainer} >
+                <View style={mainMenuStyle.carouselContainer} >
+                    <Carousel
+                        data={this.state.cardsList}
+                        renderItem={this.renderMenuCard}
+                        sliderWidth={380}
+                        itemWidth={300}
+                        onSnapToItem={(index) => this.setState({ activeSlide: index }) }
                     />
-                )}
-            />
+                </View>
+                {this.returnPagination()}
+            </View>
         )
     }
 

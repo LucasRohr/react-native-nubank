@@ -3,15 +3,15 @@ import { MenuCards } from '../../enums';
 export const menuCards = [
 
     {
-        tipo: MenuCards.FATURA
+        type: MenuCards.FATURA
     },
 
     {
-        tipo: MenuCards.CONTA
+        type: MenuCards.CONTA
     },
 
     {
-        tipo: MenuCards.REWARDS
+        type: MenuCards.REWARDS
     }
 
 ]

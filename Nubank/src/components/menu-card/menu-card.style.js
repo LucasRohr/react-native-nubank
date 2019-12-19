@@ -4,8 +4,8 @@ import { colors } from '../../style'
 export const menuCardStyle = StyleSheet.create({
 
     menuCardContainer: {
-        width: '90%',
-        height: '35%',
+        width: '100%',
+        height: '100%',
         marginBottom: '20%',
         display: 'flex',
         flexDirection: 'column',

@@ -1,7 +1,7 @@
 export const MenuCards = Object.freeze({
 
-    FATURA: 'FATURA',
-    CONTA: 'CONTA',
+    INVOICE: 'FATURA',
+    ACCOUNT: 'CONTA',
     REWARDS: 'REWARDS'
     
 })

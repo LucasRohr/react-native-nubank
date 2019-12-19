@@ -1,4 +1,4 @@
-import Friends from '../../assets/svg/friends.png'
+import Friends from '../../assets/svg/friends.svg'
 
 export const MenuOptionsIcons = Object.freeze({
 

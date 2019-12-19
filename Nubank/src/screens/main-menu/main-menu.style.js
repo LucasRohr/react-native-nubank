@@ -17,7 +17,24 @@ export const mainMenuStyle = StyleSheet.create({
     menuOptionsContainer: {
         display: 'flex',
         flexDirection: 'row',
-        width: '100%'
+        width: '100%',
+        height: '20%'
+    },
+
+    paginationCarouselContainer: {
+        width: '100%',
+        height: '60%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '10%'
+    },
+
+    carouselContainer: {
+        width: '100%',
+        height: '75%',
+        marginTop: '20%'
     }
 
 })
