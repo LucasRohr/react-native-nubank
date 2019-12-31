@@ -15,7 +15,12 @@ export class MainMenu extends PureComponent {
             cardsList: menuCards,
             activeSlide: 0,
             user: {
-                username: 'Lucas'
+                username: 'Lucas',
+                invoice: 79.84,
+                limit: 350.21,
+                recentBuy: {
+                    description: 'Compra mais recente em Ifood no valor de R$ 9,80 ontem'
+                }
             }
         }
     }
@@ -31,7 +36,7 @@ export class MainMenu extends PureComponent {
     renderMenuCard = () => {
         const enumAsList = Object.values(MenuCards)
 
-        return <MenuCard item={enumAsList[this.state.activeSlide]} />
+        return <MenuCard item={enumAsList[this.state.activeSlide]} user={this.state.user} />
     }
 
     returnPagination = () => {
@@ -59,8 +64,8 @@ export class MainMenu extends PureComponent {
                     <Carousel
                         data={this.state.cardsList}
                         renderItem={this.renderMenuCard}
-                        sliderWidth={380}
-                        itemWidth={300}
+                        sliderWidth={400}
+                        itemWidth={350}
                         onSnapToItem={(index) => this.setState({ activeSlide: index }) }
                     />
                 </View>

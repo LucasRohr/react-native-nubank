@@ -1,11 +1,15 @@
 import React, { PureComponent } from 'react';
-import { MainMenu } from './src/screens'
+import { Provider } from 'react-redux';
+import { STORE } from './src/storage'
+import { MainMenu } from './src/screens';
 
 export class App extends PureComponent {
   
   render() {
     return (
-      <MainMenu/>
+      <Provider store={ STORE } >
+        <MainMenu />
+      </Provider>
     )
   }
 

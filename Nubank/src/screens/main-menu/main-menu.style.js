@@ -33,7 +33,7 @@ export const mainMenuStyle = StyleSheet.create({
 
     carouselContainer: {
         width: '100%',
-        height: '75%',
+        height: '85%',
         marginTop: '20%'
     }
 

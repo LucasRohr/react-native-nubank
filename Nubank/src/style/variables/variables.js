@@ -3,4 +3,8 @@ export const colors = {
     secondary: '#FFFFFF',
 
     primaryLighter: '#943bb8',
+
+    invoice: '#06becf',
+
+    limit: '#23c466'
 }
